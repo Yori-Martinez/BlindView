@@ -14,6 +14,21 @@ body {
 }
 
 /* HEADER (Igual que el login) */
+/* Estilos para el enlace que envuelve el logo */
+.logo-link {
+    text-decoration: none; /* Elimina el subrayado de enlace por defecto */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+/* Estilos para la imagen del logo */
+.logo-img {
+    height: 4rem; /* Tamaño ajustable: 40px es un buen tamaño para un header */
+    width: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    border: none; /* Elimina bordes predeterminados en algunos navegadores */
+}
+
 .header {
     background-color: #e0e0e0;
     padding: 20px 40px;

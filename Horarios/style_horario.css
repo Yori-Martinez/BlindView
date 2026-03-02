@@ -1,0 +1,155 @@
+/* RESET BÁSICO Y HEADER (Igual que los anteriores) */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background-color: #ffffff; display: flex; flex-direction: column; min-height: 100vh; }
+
+/* Estilos para el enlace que envuelve el logo */
+.logo-link {
+    text-decoration: none; /* Elimina el subrayado de enlace por defecto */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+/* Estilos para la imagen del logo */
+.logo-img {
+    height: 4rem; /* Tamaño ajustable: 40px es un buen tamaño para un header */
+    width: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    border: none; /* Elimina bordes predeterminados en algunos navegadores */
+}
+
+.header {
+    background-color: #e0e0e0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #000;
+}
+
+.btn-ayuda {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 200%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-ayuda:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Reemplaza los 20px. Escala mucho mejor */
+}
+
+/* --- ESTILOS DE LA CAJA DE HORARIOS --- */
+.horarios-wrapper {
+    position: relative; /* ¡Clave! Le dice a la flecha que flote respecto a este contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 800px; /* Lo reduje un poquito para que se parezca más a tu Figma */
+}
+
+.horarios-card {
+    background-color: #d9d9d9;
+    border-radius: 1rem;
+    padding: 2.5rem 3rem; /* Ajustado con rem para que sea consistente */
+    width: 100%; /* Hace que la caja ocupe el 100% del centro */
+}
+
+/* Títulos: DIAS, MESES, HORAS */
+.titulos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    font-size: 4rem; /* rem es perfecto para textos responsivos */
+    font-weight: bold;
+    color: #000;
+}
+
+/* Filas blancas clickeables */
+.fila-horario {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.2rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #555;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.fila-horario:last-child {
+    margin-bottom: 0;
+}
+
+.fila-horario:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+    color: #000;
+}
+
+/* --- LA FLECHA --- */
+.flecha-nav {
+    position: absolute; /* ¡La magia! Saca la flecha del bloque para que no afecte el centrado */
+    right: -8rem; /* La empuja 5rem hacia afuera de la caja gris por la derecha */
+    background: none;
+    border: none;
+    font-size: 6rem; 
+    color: #d9d9d9;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.flecha-nav:hover {
+    color: #b0b0b0;
+}
+
+.oculto {
+    display: none;
+}
+
+/* --- RESPONSIVE PARA CELULARES --- */
+/* Cambié 600px por 768px para que también se vea bien en Tablets */
+@media (max-width: 768px) { 
+    .horarios-wrapper {
+        flex-direction: column; 
+        width: 95%; 
+    }
+    .titulos-columnas { font-size: 1rem; }
+    .fila-horario { font-size: 0.9rem; padding: 1rem 0.5rem; }
+    
+    .flecha-nav { 
+        position: static; /* En celular le quitamos lo flotante para que baje normal */
+        right: auto;
+        font-size: 3rem; 
+        transform: rotate(90deg); /* Apunta hacia abajo */
+        margin-top: 1.5rem;
+    }
+}

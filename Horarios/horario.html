@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de Citas</title>
+    <link rel="stylesheet" href="style_horario.css">
+</head>
+<body>
+
+    <header class="header">
+            <a href="../Menu_principal/menu.html" class="logo-link">
+        <img src="../image.png" alt="BlindView Logo" class="logo-img">
+    </a >
+    <button class="btn-ayuda" id="btnAyuda">AYUDA</button>
+    </header>
+
+    <main class="main-content">
+        <div class="horarios-wrapper">
+            
+            <div class="horarios-card">
+                <div class="titulos-columnas">
+                    <span>DIAS</span>
+                    <span>MESES</span>
+                    <span>HORAS</span>
+                </div>
+
+                <div id="pagina-1" class="grupo-horarios">
+                    <button class="fila-horario">
+                        <span>VIERNES 27</span><span>FEBRERO</span><span>15:20</span>
+                    </button>
+                    <button class="fila-horario">
+                        <span>VIERNES 27</span><span>FEBRERO</span><span>17:30</span>
+                    </button>
+                    <button class="fila-horario">
+                        <span>LUNES 02</span><span>MARZO</span><span>17:30</span>
+                    </button>
+                    <button class="fila-horario">
+                        <span>LUNES 02</span><span>MARZO</span><span>18:50</span>
+                    </button>
+                </div>
+
+                <div id="pagina-2" class="grupo-horarios oculto">
+                    <button class="fila-horario">
+                        <span>MARTES 03</span><span>MARZO</span><span>15:20</span>
+                    </button>
+                    <button class="fila-horario">
+                        <span>MARTES 03</span><span>MARZO</span><span>17:30</span>
+                    </button>
+                    <button class="fila-horario">
+                        <span>MIERCOLES 04</span><span>MARZO</span><span>17:30</span>
+                    </button>
+                    <button class="fila-horario">
+                        <span>MIERCOLES 04</span><span>MARZO</span><span>18:50</span>
+                    </button>
+                </div>
+            </div>
+
+            <button id="btnNavegar" class="flecha-nav">&#9654;</button> </div>
+    </main>
+
+    <script src="script_horario.js"></script>
+</body>
+</html>

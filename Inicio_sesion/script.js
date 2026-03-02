@@ -4,8 +4,9 @@ const loginForm = document.getElementById('loginForm');
 
 // 2. Le damos interactividad al botón de ayuda
 btnAyuda.addEventListener('click', () => {
-    alert('Has hecho clic en Ayuda. Aquí podrías abrir un modal o redirigir a otra página.');
+    window.location.href = 'https://www.comunidad.madrid/servicios/atencion-ciudadano';
 });
+
 
 // 3. Simulamos lo que pasa al enviar el formulario y redirigimos
 loginForm.addEventListener('submit', (evento) => {
@@ -13,7 +14,7 @@ loginForm.addEventListener('submit', (evento) => {
     evento.preventDefault();
     
     // Aquí le decimos al navegador que nos lleve al HTML del menú
-    window.location.href = 'D:/Users/Casa/Documents/Zahir/BlindView/Menu_principal/menu.html';
+    window.location.href = '../Menu_principal/menu.html';
     
     // Capturamos lo que el usuario escribió en el correo
     const correoIngresado = document.getElementById('correo').value;

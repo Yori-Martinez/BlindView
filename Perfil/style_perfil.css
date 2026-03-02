@@ -1,0 +1,138 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+/* Estilos para el enlace que envuelve el logo */
+.logo-link {
+    text-decoration: none; /* Elimina el subrayado de enlace por defecto */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+/* Estilos para la imagen del logo */
+.logo-img {
+    height: 4rem; /* Tamaño ajustable: 40px es un buen tamaño para un header */
+    width: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    border: none; /* Elimina bordes predeterminados en algunos navegadores */
+}
+
+.header {
+    background-color: #e0e0e0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #000;
+}
+
+.btn-ayuda {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Un poco de margen arriba y abajo */
+}
+
+/* --- LA CUADRÍCULA (GRID) --- */
+.dashboard-grid {
+    display: grid;
+    /* Creamos 2 columnas del mismo tamaño (1 fracción cada una) */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; /* Espacio entre tarjetas */
+    width: 100%;
+    max-width: 900px; /* Tamaño máximo para PC */
+}
+
+/* ESTILO BASE DE LAS TARJETAS GRISES */
+.card {
+    background-color: #d9d9d9;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* LOS CUADROS BLANCOS DE INFORMACIÓN */
+.info-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Quitamos el margen del último elemento para que no quede espacio extra abajo */
+.info-box:last-child {
+    margin-bottom: 0;
+}
+
+/* --- AJUSTES ESPECÍFICOS PARA NOTIFICACIONES --- */
+.notificaciones {
+    /* Le decimos que ocupe desde la primera línea hasta la última (todo el ancho) */
+    grid-column: 1 / -1; 
+    display: flex;
+    gap: 20px;
+}
+
+.noti-columna-izq, .noti-columna-der {
+    flex: 1; /* Ambas mitades ocupan lo mismo */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Empujamos las notificaciones 2 y 3 hacia abajo para alinearlas con la 1 */
+.noti-columna-der {
+    justify-content: flex-end; 
+}
+
+
+/* --- DISEÑO RESPONSIVE (Celulares) --- */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        /* En celular, pasamos a 1 sola columna */
+        grid-template-columns: 1fr; 
+    }
+    
+    .notificaciones {
+        /* En celular, las notificaciones se apilan una arriba de otra */
+        flex-direction: column; 
+    }
+    
+    .noti-columna-der {
+        justify-content: flex-start;
+    }
+}

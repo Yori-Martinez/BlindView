@@ -7,27 +7,23 @@ const btnInformes = document.getElementById('btnInformes');
 
 // Agregamos eventos de clic a cada uno (aquí irían los enlaces a tus otros HTMLs)
 btnAyuda.addEventListener('click', () => {
-    alert('Has hecho clic en Ayuda');
+    window.location.href = 'https://www.comunidad.madrid/servicios/atencion-ciudadano';
 });
 
 btnCita.addEventListener('click', () => {
     // Ejemplo de cómo navegar a otra página real:
     // window.location.href = "cita-rapida.html";
-    alert('Ir a la página de Cita Rápida');
-    window.location.href = 'D:/Users/Casa/Documents/Zahir/BlindView/Menu_principal/menu.html';
+    window.location.href = '../Menu_principal/menu.html';
 });
 
 btnGestion.addEventListener('click', () => {
-    alert('Ir a la página de Gestión de Citas');
-    window.location.href = 'D:/Users/Casa/Documents/Zahir/BlindView/Gestion_citas/gestion.html';
+    window.location.href = '../Gestion_citas/gestion.html';
 });
 
 btnPerfil.addEventListener('click', () => {
-    alert('Ir a la página de Mi Perfil');
-    window.location.href = 'D:/Users/Casa/Documents/Zahir/BlindView/Menu_principal/menu.html';
+    window.location.href = '../Perfil/perfil.html';
 });
 
 btnInformes.addEventListener('click', () => {
-    alert('Ir a la página de Informes');
-    window.location.href = 'D:/Users/Casa/Documents/Zahir/BlindView/Menu_principal/menu.html';
+    window.location.href = 'informes.html';
 });

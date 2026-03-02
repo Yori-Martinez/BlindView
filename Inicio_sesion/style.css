@@ -22,23 +22,19 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: normal;
-    color: #000;
+.logo-link {
+    text-decoration: none; /* Elimina el subrayado de enlace por defecto */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
 }
 
-.btn-ayuda {
-     background-color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 200%;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Estilos para la imagen del logo */
+.logo-img {
+    height: 4rem; /* Tamaño ajustable: 40px es un buen tamaño para un header */
+    width: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    border: none; /* Elimina bordes predeterminados en algunos navegadores */
 }
-
 .btn-ayuda:hover {
     background-color: #f0f0f0;
 }
