@@ -1,0 +1,128 @@
+/* 1. RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* 2. BARRA SUPERIOR (HEADER) */
+.header {
+    background-color: #e0e0e0; 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000;
+}
+
+.btn-ayuda {
+     background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 200%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-ayuda:hover {
+    background-color: #f0f0f0;
+}
+
+/* 3. CONTENEDOR PRINCIPAL */
+.main-content {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+}
+
+/* 4. TARJETA DE LOGIN */
+.login-card {
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px; 
+    background-color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%; 
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #999; 
+}
+
+.forgot-password {
+    margin-bottom: 30px;
+}
+
+.forgot-password a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.btn-iniciar {
+    width: 100%;
+    background-color: #d9d9d9;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-iniciar:hover {
+    background-color: #c0c0c0; 
+}
+
+/* 5. DISEÑO RESPONSIVE (Celulares) */
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 20px; 
+    }
+    .login-card {
+        padding: 20px; 
+        border: none; 
+    }
+}

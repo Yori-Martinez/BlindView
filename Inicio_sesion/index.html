@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">LOGOTIPO</div>
+        <button class="btn-ayuda" id="btnAyuda">AYUDA</button>
+    </header>
+
+    <main class="main-content">
+        <div class="login-card">
+            <form id="loginForm" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="correo">CORREO ELECTRONICO</label>
+                    <input type="email" id="correo" placeholder="CORREO" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contrasena">CONTRASEÑA</label>
+                    <input type="password" id="contrasena" placeholder="*******" required>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-iniciar">INICIAR SESION</button>
+                
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
