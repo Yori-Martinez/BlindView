@@ -14,7 +14,7 @@ loginForm.addEventListener('submit', (evento) => {
     evento.preventDefault();
     
     // Aquí le decimos al navegador que nos lleve al HTML del menú
-    window.location.href = '../Menu_principal/menu.html';
+    window.location.href = './Menu_principal/menu.html';
     
     // Capturamos lo que el usuario escribió en el correo
     const correoIngresado = document.getElementById('correo').value;
