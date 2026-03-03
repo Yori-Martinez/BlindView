@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - BlindView</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo-link">
+           <img src="image.png" alt="BlindView Logo" class="logo-img">
+        </a>
+        <button class="btn-ayuda" id="btnAyuda">AYUDA</button>
+    </header>
+
+    <main class="main-content">
+        <div class="login-card">
+            
+            <form id="registroForm" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="nombre">NOMBRE COMPLETO</label>
+                    <input type="text" id="nombre" placeholder="TU NOMBRE" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">CORREO ELECTRONICO</label>
+                    <input type="email" id="correo" placeholder="CORREO" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contrasena">CONTRASEÑA</label>
+                    <input type="password" id="contrasena" placeholder="*******" required>
+                </div>
+
+                <div class="forgot-password" style="text-align: center; margin-bottom: 25px;">
+                    <a href="index.html">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                </div>
+
+                <button type="submit" class="btn-iniciar">REGISTRARSE</button>
+                
+            </form>
+        </div>
+    </main>
+
+    <script src="script_registro.js"></script>
+</body>
+</html>

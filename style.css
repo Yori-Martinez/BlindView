@@ -38,6 +38,15 @@ body {
 .btn-ayuda:hover {
     background-color: #f0f0f0;
 }
+.btn-ayuda {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 /* 3. CONTENEDOR PRINCIPAL */
 .main-content {

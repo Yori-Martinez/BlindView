@@ -8,6 +8,15 @@ btnAyuda.addEventListener('click', () => {
 });
 
 
+// Capturamos el nuevo botón de registrarse
+const btnIrRegistro = document.getElementById('btnIrRegistro');
+
+// Le agregamos la acción del clic
+btnIrRegistro.addEventListener('click', () => {
+    // Te lleva a la página de registro
+    window.location.href = 'registro.html';
+});
+
 // 3. Simulamos lo que pasa al enviar el formulario y redirigimos
 loginForm.addEventListener('submit', (evento) => {
     // Evitamos que la página se recargue automáticamente
