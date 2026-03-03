@@ -61,3 +61,9 @@ app.post('/api/registro', async (req, res) => {
         res.status(500).json({ error: 'Hubo un error al registrar' });
     }
 });
+
+// Encendemos el servidor (¡ESTO SIEMPRE VA AL FINAL!)
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor corriendo en el puerto: ${PORT} 🚀`);
+});
