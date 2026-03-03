@@ -36,10 +36,10 @@ body {
     border: none; /* Elimina bordes predeterminados en algunos navegadores */
 }
 .btn-ayuda:hover {
-    background-color: #f0f0f0;
+    background-color: #e4d100;
 }
 .btn-ayuda {
-    background-color: #ffffff;
+    background-color: #FFEA00;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -107,7 +107,7 @@ body {
 
 .btn-iniciar {
     width: 100%;
-    background-color: #d9d9d9;
+    background-color: #FFEA00;
     border: none;
     padding: 15px;
     border-radius: 8px;
@@ -118,7 +118,7 @@ body {
 }
 
 .btn-iniciar:hover {
-    background-color: #c0c0c0; 
+    background-color: #e4d100; 
 }
 
 /* 5. DISEÑO RESPONSIVE (Celulares) */
