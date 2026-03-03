@@ -36,7 +36,7 @@ const crearTabla = async () => {
                 contrasena VARCHAR(255) NOT NULL
             );
         `);
-        console.log('Tabla de usuarios lista ');
+        console.log('Tabla de usuarios lista 📁');
     } catch (error) {
         console.error('Error creando la tabla:', error);
     }
@@ -44,8 +44,7 @@ const crearTabla = async () => {
 crearTabla();
 
 
-// RUTA PARA REGISTRAR UN USUARIO
-// RUTA PARA REGISTRAR UN USUARIO
+// 1. RUTA PARA REGISTRAR UN USUARIO
 app.post('/api/registro', async (req, res) => {
     try {
         const { nombre, correo, contrasena } = req.body;
@@ -62,7 +61,31 @@ app.post('/api/registro', async (req, res) => {
     }
 });
 
-// Encendemos el servidor (¡ESTO SIEMPRE VA AL FINAL!)
+// 2. RUTA PARA INICIAR SESIÓN (LOGIN)
+app.post('/api/login', async (req, res) => {
+    try {
+        const { correo, contrasena } = req.body;
+
+        // Buscamos en la base de datos a alguien con ese correo y contraseña exactos
+        const resultado = await pool.query(
+            'SELECT * FROM usuarios WHERE correo = $1 AND contrasena = $2',
+            [correo, contrasena]
+        );
+
+        // Si el resultado tiene al menos 1 fila, es que los datos son correctos
+        if (resultado.rows.length > 0) {
+            res.json({ mensaje: '¡Login exitoso!', exito: true });
+        } else {
+            // Si no encuentra nada, los datos están mal
+            res.status(401).json({ error: 'Correo o contraseña incorrectos', exito: false });
+        }
+    } catch (error) {
+        console.error('Error en el login:', error);
+        res.status(500).json({ error: 'Hubo un error al intentar iniciar sesión' });
+    }
+});
+
+// 3. Encendemos el servidor (¡ESTO SIEMPRE VA AL FINAL!)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Servidor corriendo en el puerto: ${PORT} 🚀`);
