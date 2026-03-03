@@ -1,6 +1,6 @@
 // Capturamos todos los botones por su ID
 const btnAyuda = document.getElementById('btnAyuda');
-const btnCita = document.getElementById('btnCita');
+const btnCerrar = document.getElementById('btnCerrar');
 const btnGestion = document.getElementById('btnGestion');
 const btnPerfil = document.getElementById('btnPerfil');
 const btnInformes = document.getElementById('btnInformes');
@@ -10,10 +10,10 @@ btnAyuda.addEventListener('click', () => {
     window.location.href = 'https://www.comunidad.madrid/servicios/atencion-ciudadano';
 });
 
-btnCita.addEventListener('click', () => {
+btnCerrar.addEventListener('click', () => {
     // Ejemplo de cómo navegar a otra página real:
     // window.location.href = "cita-rapida.html";
-    window.location.href = '../Menu_principal/menu.html';
+    window.location.href = '/index.html';
 });
 
 btnGestion.addEventListener('click', () => {

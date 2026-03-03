@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -43,7 +43,7 @@ body {
 }
 
 .btn-ayuda {
-    background-color: #ffffff;
+    background-color: #FFEA00;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
@@ -53,8 +53,9 @@ body {
     transition: background-color 0.3s;
 }
 
+
 .btn-ayuda:hover {
-    background-color: #f0f0f0;
+    background-color: #e4d100;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -83,7 +84,7 @@ body {
     position: absolute;
     width: 35%; 
     height: 35%; /* <--- ¡ESTA ES LA SOLUCIÓN! Le damos una altura fija */
-    background-color: #ffffff;
+    background-color: #FFEA00;
     border: none;
     border-radius: 50%;
     display: flex;
@@ -101,7 +102,7 @@ body {
 /* Efecto al pasar el mouse */
 .menu-item:hover {
     transform: scale(1.05); /* Se agrandan un poquito */
-    background-color: #f9f9f9;
+    background-color: #e4d100;
 }
 
 /* 3. Posicionando cada botón en su lugar exacto */
