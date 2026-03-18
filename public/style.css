@@ -43,7 +43,7 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 2rem;
+    font-size: 200%;
     font-weight: bold;
     cursor: pointer;
 }
@@ -59,12 +59,26 @@ body {
 
 /* 4. TARJETA DE LOGIN */
 .login-card {
-    border: 1px solid #ccc; 
-    border-radius: 8px;
+
+    /* 1. Medidas iguales (ajusta el número si lo ves muy grande o pequeño) */
+    width: 25%;
+    height: 100%;
+    
+    /* 2. El truco mágico del círculo */
+    border-radius: 50%; 
+    
+    /* Tu color gris de fondo (déjalo como lo tengas) */
+    background-color: #e0e0e0; 
+
+    /* 3. CENTRADO PERFECTO: Esto es vital para que el formulario no quede chueco adentro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Para que las cosas no se salgan por los bordes redondos */
     padding: 40px;
-    width: 100%;
-    max-width: 450px; 
-    background-color: #ffffff;
+    box-sizing: border-box;
 }
 
 .form-group {

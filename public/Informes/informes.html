@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlindView - Informes</title>
+    <link rel="stylesheet" href="informes.css">
+</head>
+<body>
+    <header class="header-informes">
+       <a href="../Menu_principal/menu.html" class="logo-link">
+        <img src="../image.png" alt="BlindView Logo" class="logo-img">
+    </a >
+    <button class="btn-ayuda" id="btnAyuda">AYUDA</button>
+    </header>
+
+    <main class="contenedor-informes">
+        
+        <section class="tarjetas-resumen">
+            <div class="tarjeta">
+                <h3>Total de Usuarios</h3>
+                <p id="totalUsuarios">Cargando...</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Citas de hoy</h3>
+                <p id="totalCitas">12</p>
+            </div>
+        </section>
+
+        <section class="tabla-contenedor">
+            <h2>Últimos Registros del Sistema</h2>
+            <table id="tablaInformes">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+        <button id="btnGenerar" class="btn-primario">Descargar Reporte PDF</button>
+
+    </main>
+
+    <script src="script_informes.js"></script>
+</body>
+</html>

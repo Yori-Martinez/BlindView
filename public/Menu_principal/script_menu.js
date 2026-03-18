@@ -13,7 +13,7 @@ btnAyuda.addEventListener('click', () => {
 btnCerrar.addEventListener('click', () => {
     // Ejemplo de cómo navegar a otra página real:
     // window.location.href = "cita-rapida.html";
-    window.location.href = '/index.html';
+    window.location.href = '../index.html';
 });
 
 btnGestion.addEventListener('click', () => {
@@ -25,5 +25,5 @@ btnPerfil.addEventListener('click', () => {
 });
 
 btnInformes.addEventListener('click', () => {
-    window.location.href = 'informes.html';
+    window.location.href = '../Informes/informes.html';
 });
