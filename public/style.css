@@ -23,29 +23,31 @@ body {
 }
 
 .logo-link {
-    text-decoration: none; /* Elimina el subrayado de enlace por defecto */
+    text-decoration: none;
     display: flex;
-    align-items: center; /* Centra la imagen verticalmente */
+    align-items: center; 
 }
 
-/* Estilos para la imagen del logo */
 .logo-img {
-    height: 4rem; /* Tamaño ajustable: 40px es un buen tamaño para un header */
-    width: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Elimina espacios extra debajo de la imagen */
-    border: none; /* Elimina bordes predeterminados en algunos navegadores */
+    height: 4rem; 
+    width: auto; 
+    display: block; 
+    border: none; 
 }
-.btn-ayuda:hover {
-    background-color: #e4d100;
-}
+
 .btn-ayuda {
     background-color: #FFEA00;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 200%;
+    font-size: 20px; /* Ajustado para que no se vea gigante */
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s; /* Le da un efecto suave al pasar el mouse */
+}
+
+.btn-ayuda:hover {
+    background-color: #e4d100;
 }
 
 /* 3. CONTENEDOR PRINCIPAL */
@@ -57,48 +59,55 @@ body {
     padding: 20px; 
 }
 
-/* 4. TARJETA DE LOGIN */
+/* 4. TARJETA DE LOGIN CIRCULAR PERFECTA */
 .login-card {
-
-    /* 1. Medidas iguales (ajusta el número si lo ves muy grande o pequeño) */
-    width: 25%;
-    height: 100%;
+    /* EL TRUCO MÁGICO PARA EL CÍRCULO */
+    width: 100%;
+    max-width: 480px; /* Define qué tan grande quieres el círculo */
+    aspect-ratio: 1 / 1; /* Obliga a que sea un cuadrado perfecto invisible */
+    border-radius: 50%; /* Lo convierte en un círculo perfecto */
     
-    /* 2. El truco mágico del círculo */
-    border-radius: 50%; 
-    
-    /* Tu color gris de fondo (déjalo como lo tengas) */
     background-color: #e0e0e0; 
 
-    /* 3. CENTRADO PERFECTO: Esto es vital para que el formulario no quede chueco adentro */
+    /* Centrado perfecto del formulario adentro */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    /* Para que las cosas no se salgan por los bordes redondos */
-    padding: 40px;
-    box-sizing: border-box;
+    /* Padding alto para que las letras no toquen los bordes curvos */
+    padding: 50px; 
+}
+
+/* Reducimos el ancho del formulario para que respete la curva del círculo */
+.login-card form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center; /* Centramos los textos de las etiquetas */
 }
 
 .form-group label {
     display: block;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .form-group input {
     width: 100%; 
-    padding: 15px;
-    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
     outline: none;
+    text-align: center; /* Se ve mucho más limpio si escribes centrado en un círculo */
 }
 
 .form-group input:focus {
@@ -106,7 +115,8 @@ body {
 }
 
 .forgot-password {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .forgot-password a {
@@ -119,13 +129,21 @@ body {
     text-decoration: underline;
 }
 
+/* Contenedor Flex para los dos botones que pusimos antes */
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
 .btn-iniciar {
     width: 100%;
     background-color: #FFEA00;
     border: none;
-    padding: 15px;
+    padding: 12px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -141,7 +159,10 @@ body {
         padding: 15px 20px; 
     }
     .login-card {
-        padding: 20px; 
-        border: none; 
+        max-width: 360px; /* Hacemos el círculo un poco más pequeño para el celular */
+        padding: 30px; 
+    }
+    .login-card form {
+        width: 95%; /* Aprovechamos más el espacio interno */
     }
 }
