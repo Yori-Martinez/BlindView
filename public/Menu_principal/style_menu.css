@@ -20,7 +20,7 @@ body {
    ========================================= */
 .header {
     background-color: #e0e0e0;
-    padding: 20px 40px;
+    padding: 1.25rem 5%; /* Porcentajes para mantener la fluidez */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,9 +42,9 @@ body {
 .btn-ayuda {
     background-color: #FFEA00;
     border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 20px; 
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem; /* ~20px */
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s; 
@@ -62,7 +62,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 /* =========================================
@@ -72,13 +72,13 @@ body {
 /* 1. El círculo gris de fondo */
 .circle-menu {
     position: relative;
-    /* EL TRUCO: 100% de ancho, pero con un límite máximo para PC */
     width: 100%;
-    max-width: 500px; 
+    /* ¡AQUÍ ESTÁ LA MAGIA! Crece en PC para verse imponente */
+    max-width: 38rem; 
     aspect-ratio: 1 / 1; 
     background-color: #d9d9d9;
     border-radius: 50%; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra de profundidad */
+    box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.5); /* Sombra en rem */
 }
 
 /* 2. Estilo base para los botones circulares */
@@ -94,17 +94,16 @@ body {
     align-items: center;
     text-align: center;
     
-    font-size: 22px; /* Mejor usar PX para controlar textos largos */
+    font-size: 1.5rem; /* ~24px: Letra más grande y legible para PC */
     font-weight: bold;
     color: #000;
     cursor: pointer;
     
-    /* Mejoramos el diseño interno del botón */
-    padding: 10px;
+    padding: 0.625rem;
     line-height: 1.2;
-    word-wrap: break-word; /* Evita que palabras muy largas se salgan del botón */
+    word-wrap: break-word; 
     
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Hace que el botón flote */
+    box-shadow: 0 0.375rem 1rem rgba(0,0,0,0.3);
     transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -127,53 +126,53 @@ body {
 /* Tabletas (Pantallas menores a 900px) */
 @media (max-width: 900px) {
     .header {
-        padding: 15px 30px;
+        padding: 1rem 4%;
     }
     .logo-img {
         height: 3.5rem;
     }
     .btn-ayuda {
-        font-size: 18px;
-        padding: 8px 16px;
+        font-size: 1.125rem;
+        padding: 0.5rem 1rem;
     }
     .circle-menu {
-        max-width: 450px; /* Reducimos el círculo un poco */
+        max-width: 30rem; /* Escala intermedia para tableta */
     }
     .menu-item {
-        font-size: 18px; /* Achicamos letras */
+        font-size: 1.125rem; /* ~18px */
     }
 }
 
 /* Celulares (Pantallas menores a 600px) */
 @media (max-width: 600px) {
     .header {
-        padding: 10px 15px;
+        padding: 0.75rem 3%;
     }
     .logo-img {
         height: 2.8rem;
     }
     .btn-ayuda {
-        font-size: 14px;
-        padding: 8px 12px;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
     }
     
     .circle-menu {
-        width: 95%; /* Que ocupe casi todo el celular */
-        max-width: 380px;
+        width: 95%; /* Aprovecha casi toda la pantalla */
+        max-width: 24rem;
     }
     
     .menu-item {
-        font-size: 14px; /* Letra especial para móviles */
-        padding: 5px; /* Menos relleno para aprovechar el espacio */
+        font-size: 0.875rem; /* ~14px: Letra justa para móviles */
+        padding: 0.3rem; 
     }
 }
 
 /* Pantallas súper pequeñas (Ej. iPhone SE) */
 @media (max-width: 380px) {
     .circle-menu {
-        width: 100%;
+        width: 98%; /* Apuramos el límite */
     }
     .menu-item {
-        font-size: 12px; 
+        font-size: 0.75rem; /* ~12px */
     }
 }
