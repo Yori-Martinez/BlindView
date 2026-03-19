@@ -16,6 +16,7 @@ const usuariosPrueba = [
     { id: 4, nombre: "Ana López", correo: "ana@empresa.com", estado: "Activo" }
 ];
 
+
 // 4. Función mágica que dibuja la tabla solita
 function cargarTabla() {
     // Vaciamos la tabla por si acaso
@@ -41,6 +42,11 @@ function cargarTabla() {
 
     // Actualizamos el número gigante de la tarjeta de arriba
     textoTotalUsuarios.textContent = usuariosPrueba.length;
+    
+    // Agregamos el total de citas seleccionadas desde localStorage
+    const totalCitas = document.getElementById('totalCitas');
+    const citasSeleccionadas = JSON.parse(localStorage.getItem('citasSeleccionadas')) || [];
+    totalCitas.textContent = citasSeleccionadas.length;
 }
 
 // Ejecutamos la función apenas abrimos la página
