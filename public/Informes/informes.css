@@ -142,6 +142,50 @@ tr:hover {
 .btn-primario:hover {
     background-color: #e4d100;
 }
+
+/* Botón secundario para limpiar citas */
+.btn-secundario {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.btn-secundario:hover {
+    background-color: #e74c3c;
+}
+
+/* Botón para eliminar cita individual */
+.btn-eliminar-cita {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-eliminar-cita:hover {
+    background-color: #e74c3c;
+}
+
+/* Mensaje cuando no hay citas */
+.mensaje-vacio {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 20px;
+    font-style: italic;
+}
+
 /* --- AJUSTES RESPONSIVE --- */
 
 /* Tabletas y pantallas medianas (menos de 992px) */
