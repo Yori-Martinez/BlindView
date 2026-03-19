@@ -1,4 +1,6 @@
-/* RESET BÁSICO */
+/* =========================================
+   1. RESET BÁSICO
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -13,22 +15,9 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER (Igual que el login) */
-/* Estilos para el enlace que envuelve el logo */
-.logo-link {
-    text-decoration: none; /* Elimina el subrayado de enlace por defecto */
-    display: flex;
-    align-items: center; /* Centra la imagen verticalmente */
-}
-
-/* Estilos para la imagen del logo */
-.logo-img {
-    height: 4rem; /* Tamaño ajustable: 40px es un buen tamaño para un header */
-    width: auto; /* Mantiene la proporción de la imagen */
-    display: block; /* Elimina espacios extra debajo de la imagen */
-    border: none; /* Elimina bordes predeterminados en algunos navegadores */
-}
-
+/* =========================================
+   2. BARRA SUPERIOR (HEADER)
+   ========================================= */
 .header {
     background-color: #e0e0e0;
     padding: 20px 40px;
@@ -37,9 +26,17 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
-    color: #000;
+.logo-link {
+    text-decoration: none; 
+    display: flex;
+    align-items: center; 
+}
+
+.logo-img {
+    height: 4rem; 
+    width: auto; 
+    display: block; 
+    border: none; 
 }
 
 .btn-ayuda {
@@ -47,16 +44,19 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 20px; /* Ajustado para que no se vea gigante */
+    font-size: 20px; 
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s; /* Le da un efecto suave al pasar el mouse */
+    transition: background-color 0.3s; 
 }
 
 .btn-ayuda:hover {
     background-color: #e4d100;
 }
-/* CONTENEDOR PRINCIPAL */
+
+/* =========================================
+   3. CONTENEDOR PRINCIPAL
+   ========================================= */
 .main-content {
     flex: 1;
     display: flex;
@@ -65,23 +65,27 @@ body {
     padding: 20px;
 }
 
-/* --- LA MAGIA DEL MENÚ CIRCULAR --- */
+/* =========================================
+   4. LA MAGIA DEL MENÚ CIRCULAR
+   ========================================= */
 
 /* 1. El círculo gris de fondo */
 .circle-menu {
     position: relative;
+    /* EL TRUCO: 100% de ancho, pero con un límite máximo para PC */
     width: 100%;
-    max-width: 40%; /* Tamaño máximo en PC */
-    aspect-ratio: 1 / 1; /* Mantiene la proporción cuadrada para hacer un círculo */
+    max-width: 500px; 
+    aspect-ratio: 1 / 1; 
     background-color: #d9d9d9;
-    border-radius: 50%; /* Lo hace redondo */
+    border-radius: 50%; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra de profundidad */
 }
 
-/* 2. Estilo base para los botones circulares blancos */
+/* 2. Estilo base para los botones circulares */
 .menu-item {
     position: absolute;
     width: 35%; 
-    height: 35%; /* <--- ¡ESTA ES LA SOLUCIÓN! Le damos una altura fija */
+    height: 35%; 
     background-color: #FFEA00;
     border: none;
     border-radius: 50%;
@@ -89,66 +93,87 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 200%;
+    
+    font-size: 22px; /* Mejor usar PX para controlar textos largos */
     font-weight: bold;
     color: #000;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
+    /* Mejoramos el diseño interno del botón */
+    padding: 10px;
+    line-height: 1.2;
+    word-wrap: break-word; /* Evita que palabras muy largas se salgan del botón */
+    
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Hace que el botón flote */
     transition: transform 0.2s, background-color 0.2s;
 }
 
-/* Efecto al pasar el mouse */
 .menu-item:hover {
-    transform: scale(1.05); /* Se agrandan un poquito */
+    transform: scale(1.05); 
     background-color: #e4d100;
 }
 
 /* 3. Posicionando cada botón en su lugar exacto */
-/* margin: auto centra los elementos cuando tienen posición absoluta y top/bottom o left/right en 0 */
+.item-top { top: 4%; left: 0; right: 0; margin: auto; }
+.item-bottom { bottom: 4%; left: 0; right: 0; margin: auto; }
+.item-left { left: 4%; top: 0; bottom: 0; margin: auto; }
+.item-right { right: 4%; top: 0; bottom: 0; margin: auto; }
 
-.item-top {
-    top: 4%;
-    left: 0;
-    right: 0;
-    margin: auto;
+
+/* =========================================
+   5. DISEÑO RESPONSIVE (Tabletas y Celulares)
+   ========================================= */
+
+/* Tabletas (Pantallas menores a 900px) */
+@media (max-width: 900px) {
+    .header {
+        padding: 15px 30px;
+    }
+    .logo-img {
+        height: 3.5rem;
+    }
+    .btn-ayuda {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    .circle-menu {
+        max-width: 450px; /* Reducimos el círculo un poco */
+    }
+    .menu-item {
+        font-size: 18px; /* Achicamos letras */
+    }
 }
 
-.item-bottom {
-    bottom: 4%;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.item-left {
-    left: 4%;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-.item-right {
-    right: 4%;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}
-
-/* --- DISEÑO RESPONSIVE (Celulares) --- */
+/* Celulares (Pantallas menores a 600px) */
 @media (max-width: 600px) {
     .header {
-        padding: 15px 20px;
+        padding: 10px 15px;
+    }
+    .logo-img {
+        height: 2.8rem;
+    }
+    .btn-ayuda {
+        font-size: 14px;
+        padding: 8px 12px;
     }
     
-    /* En celulares, achicamos un poco la letra para que no se salga del círculo */
+    .circle-menu {
+        width: 95%; /* Que ocupe casi todo el celular */
+        max-width: 380px;
+    }
+    
     .menu-item {
-        font-size: 14px; 
+        font-size: 14px; /* Letra especial para móviles */
+        padding: 5px; /* Menos relleno para aprovechar el espacio */
     }
 }
 
-/* Pantallas súper pequeñas */
-@media (max-width: 400px) {
+/* Pantallas súper pequeñas (Ej. iPhone SE) */
+@media (max-width: 380px) {
+    .circle-menu {
+        width: 100%;
+    }
     .menu-item {
-        font-size: 12px;
+        font-size: 12px; 
     }
 }

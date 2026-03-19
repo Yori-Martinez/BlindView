@@ -40,10 +40,10 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 20px; /* Ajustado para que no se vea gigante */
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s; /* Le da un efecto suave al pasar el mouse */
+    transition: background-color 0.3s;
 }
 
 .btn-ayuda:hover {
@@ -59,29 +59,24 @@ body {
     padding: 20px; 
 }
 
-/* 4. TARJETA DE LOGIN CIRCULAR PERFECTA */
+/* 4. TARJETA DE LOGIN CIRCULAR (Escritorio) */
 .login-card {
-    /* EL TRUCO MÁGICO PARA EL CÍRCULO */
     width: 100%;
-    max-width: 480px; /* Define qué tan grande quieres el círculo */
-    aspect-ratio: 1 / 1; /* Obliga a que sea un cuadrado perfecto invisible */
-    border-radius: 50%; /* Lo convierte en un círculo perfecto */
-    
+    max-width: 480px; 
+    aspect-ratio: 1 / 1; 
+    border-radius: 50%; 
     background-color: #e0e0e0; 
 
-    /* Centrado perfecto del formulario adentro */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    /* Padding alto para que las letras no toquen los bordes curvos */
     padding: 50px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para darle profundidad */
 }
 
-/* Reducimos el ancho del formulario para que respete la curva del círculo */
 .login-card form {
-    width: 85%;
+    width: 80%; /* Lo mantenemos al 80% para no chocar con la curva del círculo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +85,7 @@ body {
 .form-group {
     width: 100%;
     margin-bottom: 20px;
-    text-align: center; /* Centramos los textos de las etiquetas */
+    text-align: center; 
 }
 
 .form-group label {
@@ -107,7 +102,7 @@ body {
     border-radius: 6px;
     font-size: 16px;
     outline: none;
-    text-align: center; /* Se ve mucho más limpio si escribes centrado en un círculo */
+    text-align: center; 
 }
 
 .form-group input:focus {
@@ -129,7 +124,6 @@ body {
     text-decoration: underline;
 }
 
-/* Contenedor Flex para los dos botones que pusimos antes */
 .botones-container {
     display: flex;
     flex-direction: column;
@@ -153,16 +147,84 @@ body {
     background-color: #e4d100; 
 }
 
-/* 5. DISEÑO RESPONSIVE (Celulares) */
-@media (max-width: 600px) {
+/* =========================================
+   5. DISEÑO RESPONSIVE (Tabletas y Celulares)
+   ========================================= */
+
+/* Para Tabletas (Pantallas menores a 900px) */
+@media (max-width: 900px) {
     .header {
-        padding: 15px 20px; 
+        padding: 15px 30px; 
+    }
+    .logo-img {
+        height: 3.5rem; /* Achicamos un poco el logo */
+    }
+    .btn-ayuda {
+        font-size: 18px;
+        padding: 8px 16px;
     }
     .login-card {
-        max-width: 360px; /* Hacemos el círculo un poco más pequeño para el celular */
-        padding: 30px; 
+        max-width: 420px; /* Círculo más proporcionado a la tableta */
+        padding: 40px; 
+    }
+}
+
+/* Para Celulares (Pantallas menores a 600px) */
+@media (max-width: 600px) {
+    .header {
+        padding: 10px 15px; /* Menos espacio a los lados para ganar espacio vital */
+    }
+    .logo-img {
+        height: 2.8rem; /* Logo ideal para celular */
+    }
+    .btn-ayuda {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .login-card {
+        width: 95%; /* Que ocupe casi todo el ancho disponible */
+        max-width: 380px;
+        padding: 20px; /* Reducimos el relleno interno para que entren los inputs */
+    }
+
+    .login-card form {
+        width: 85%; /* Aprovechamos un poco más el espacio dentro del círculo */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 15px; /* Letra más chica para que no se amontone */
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-iniciar {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Para Celulares MUY pequeños (Pantallas menores a 380px, ej. iPhone SE) */
+@media (max-width: 380px) {
+    .login-card {
+        padding: 10px;
     }
     .login-card form {
-        width: 95%; /* Aprovechamos más el espacio interno */
+        width: 90%;
+    }
+    .form-group label {
+        font-size: 14px;
+    }
+    .btn-iniciar {
+        font-size: 14px;
+        padding: 8px;
     }
 }
