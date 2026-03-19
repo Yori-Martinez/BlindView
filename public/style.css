@@ -16,7 +16,7 @@ body {
 /* 2. BARRA SUPERIOR (HEADER) */
 .header {
     background-color: #e0e0e0; 
-    padding: 20px 40px;
+    padding: 1.25rem 5%; /* Usamos porcentajes para los lados */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,9 +38,9 @@ body {
 .btn-ayuda {
     background-color: #FFEA00;
     border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 20px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem; /* 20px convertido a rem */
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -56,14 +56,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; 
+    padding: 1.25rem; 
 }
 
-/* 4. TARJETA DE LOGIN CIRCULAR (Escritorio) */
+/* 4. TARJETA DE LOGIN (Escritorio - Círculo Perfecto) */
 .login-card {
-    width: 100%;
-    max-width: 480px; 
-    aspect-ratio: 1 / 1; 
+    width: 90%;
+    max-width: 30rem; /* Límite máximo para que no sea un planeta */
+    aspect-ratio: 1 / 1; /* Mantiene el círculo */
     border-radius: 50%; 
     background-color: #e0e0e0; 
 
@@ -71,12 +71,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para darle profundidad */
+    padding: 3rem; 
+    box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.5);
 }
 
 .login-card form {
-    width: 80%; /* Lo mantenemos al 80% para no chocar con la curva del círculo */
+    width: 80%; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,23 +84,23 @@ body {
 
 .form-group {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     text-align: center; 
 }
 
 .form-group label {
     display: block;
-    font-size: 18px;
+    font-size: 1.125rem; /* ~18px */
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .form-group input {
     width: 100%; 
-    padding: 12px;
+    padding: 0.75rem;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 0.375rem;
+    font-size: 1rem; /* ~16px */
     outline: none;
     text-align: center; 
 }
@@ -110,14 +110,14 @@ body {
 }
 
 .forgot-password {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 .forgot-password a {
     color: #333;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem; /* ~14px */
 }
 
 .forgot-password a:hover {
@@ -127,7 +127,7 @@ body {
 .botones-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem;
     width: 100%;
 }
 
@@ -135,9 +135,9 @@ body {
     width: 100%;
     background-color: #FFEA00;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 18px;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem; /* ~18px */
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -154,77 +154,76 @@ body {
 /* Para Tabletas (Pantallas menores a 900px) */
 @media (max-width: 900px) {
     .header {
-        padding: 15px 30px; 
+        padding: 1rem 4%; 
     }
     .logo-img {
-        height: 3.5rem; /* Achicamos un poco el logo */
+        height: 3.5rem; 
     }
     .btn-ayuda {
-        font-size: 18px;
-        padding: 8px 16px;
+        font-size: 1.125rem;
+        padding: 0.5rem 1rem;
     }
     .login-card {
-        max-width: 420px; /* Círculo más proporcionado a la tableta */
-        padding: 40px; 
+        max-width: 26rem; /* Achicamos el círculo un poco */
+        padding: 2.5rem; 
     }
 }
 
 /* Para Celulares (Pantallas menores a 600px) */
 @media (max-width: 600px) {
     .header {
-        padding: 10px 15px; /* Menos espacio a los lados para ganar espacio vital */
+        padding: 0.75rem 3%; 
     }
     .logo-img {
-        height: 2.8rem; /* Logo ideal para celular */
+        height: 2.8rem; 
     }
     .btn-ayuda {
-        font-size: 14px;
-        padding: 8px 12px;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
     }
     
+    /* LA MAGIA DEL SQUIRCLE: Adiós al círculo perfecto, hola a la cápsula */
     .login-card {
-        width: 95%; /* Que ocupe casi todo el ancho disponible */
-        max-width: 380px;
-        padding: 20px; /* Reducimos el relleno interno para que entren los inputs */
+        width: 95%; 
+        max-width: 24rem;
+        aspect-ratio: auto; /* Dejamos que crezca hacia abajo lo que necesite */
+        border-radius: 3rem; /* Bordes SÚPER redondeados para simular el círculo */
+        padding: 2.5rem 1.5rem; /* Menos espacio a los lados, más arriba y abajo */
     }
 
     .login-card form {
-        width: 85%; /* Aprovechamos un poco más el espacio dentro del círculo */
+        width: 90%; /* Aprovechamos casi todo el ancho interno */
     }
 
     .form-group {
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
     }
 
     .form-group label {
-        font-size: 15px; /* Letra más chica para que no se amontone */
-        margin-bottom: 5px;
+        font-size: 0.95rem; 
     }
 
     .form-group input {
-        padding: 10px;
-        font-size: 14px;
+        padding: 0.625rem;
+        font-size: 0.9rem;
     }
 
     .btn-iniciar {
-        padding: 10px;
-        font-size: 16px;
+        padding: 0.625rem;
+        font-size: 1rem;
     }
 }
 
-/* Para Celulares MUY pequeños (Pantallas menores a 380px, ej. iPhone SE) */
+/* Para Celulares MUY pequeños (Pantallas menores a 380px) */
 @media (max-width: 380px) {
     .login-card {
-        padding: 10px;
-    }
-    .login-card form {
-        width: 90%;
+        border-radius: 2rem; /* Suavizamos un poco el borde curvo para que quepa todo */
+        padding: 1.5rem 1rem;
     }
     .form-group label {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     .btn-iniciar {
-        font-size: 14px;
-        padding: 8px;
+        font-size: 0.875rem;
     }
 }
