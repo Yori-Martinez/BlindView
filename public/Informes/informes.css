@@ -151,20 +151,20 @@ tr:hover {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
-    background-color: #ff6b6b;
-    color: white;
+    background-color: #FFEA00;
+    color: rgb(0, 0, 0);
     font-size: 1rem;
     margin-top: 15px;
 }
 
 .btn-secundario:hover {
-    background-color: #e74c3c;
+    background-color: #e4d100;
 }
 
 /* Botón para eliminar cita individual */
 .btn-eliminar-cita {
-    background-color: #ff6b6b;
-    color: white;
+    background-color: #FFEA00;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 5px 10px;
     border-radius: 4px;
@@ -174,7 +174,7 @@ tr:hover {
 }
 
 .btn-eliminar-cita:hover {
-    background-color: #e74c3c;
+    background-color: #e4d100;
 }
 
 /* Mensaje cuando no hay citas */

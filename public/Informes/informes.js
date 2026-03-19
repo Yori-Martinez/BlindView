@@ -69,13 +69,7 @@ btnLimpiarCitas.addEventListener('click', () => {
         cargarCitasSeleccionadas();
         document.getElementById('totalCitas').textContent = '0';
     }
-});// 3. DATOS DE PRUEBA (Mientras tu amigo nos hace la ruta en Node.js)
-const usuariosPrueba = [
-    { id: 1, nombre: "Juan Pérez", correo: "juan@gmail.com", estado: "Activo" },
-    { id: 2, nombre: "María Gómez", correo: "maria@hotmail.com", estado: "Pendiente" },
-    { id: 3, nombre: "Carlos Ruiz", correo: "carlos@yahoo.com", estado: "Inactivo" },
-    { id: 4, nombre: "Ana López", correo: "ana@empresa.com", estado: "Activo" }
-];
+});
 
 
 // 4. Función mágica que dibuja la tabla solita
