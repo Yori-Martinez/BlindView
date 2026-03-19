@@ -22,6 +22,9 @@ registroForm.addEventListener('submit', async (evento) => {
         const datos = await respuesta.json();
 
         if (respuesta.ok) {
+            // Guardamos el nombre del usuario en localStorage
+            localStorage.setItem('usuarioNombre', nombre);
+            localStorage.setItem('usuarioCorreo', correo);
             alert('¡Registro real exitoso! Revisa la base de datos o inicia sesión.');
             window.location.href = 'index.html'; // Te manda al login
         } else {
