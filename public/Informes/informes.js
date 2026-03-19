@@ -62,7 +62,7 @@ window.eliminarCita = function(index) {
 };
 
 // Botón para limpiar todas las citas
-bnLimpiarCitas.addEventListener('click', () => {
+btnLimpiarCitas.addEventListener('click', () => {
     if (confirm('¿Estás seguro de que quieres eliminar todas las citas seleccionadas?')) {
         localStorage.setItem('citasSeleccionadas', JSON.stringify([]));
         localStorage.setItem('totalCitasSeleccionadas', 0);
