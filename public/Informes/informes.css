@@ -29,12 +29,11 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 200%;
+    font-size: 20px; /* Ajustado para que no se vea gigante */
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Le da un efecto suave al pasar el mouse */
 }
-
 
 .btn-ayuda:hover {
     background-color: #e4d100;
@@ -76,14 +75,14 @@ body {
 
 .tarjeta h3 {
     font-size: 1.1rem;
-    color: #7f8c8d;
+    color: #000000;
     margin-bottom: 10px;
 }
 
 .tarjeta p {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #000000;
 }
 
 /* Diseño de la tabla */
@@ -97,7 +96,7 @@ body {
 
 .tabla-contenedor h2 {
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: #000000;
 }
 
 table {

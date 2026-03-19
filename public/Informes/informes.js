@@ -1,15 +1,13 @@
 // 1. Capturamos los elementos clave de la pantalla
-const btnVolver = document.getElementById('btnVolver');
+const btnAyuda = document.getElementById('btnAyuda');
 const btnGenerar = document.getElementById('btnGenerar');
 const tablaBody = document.querySelector('#tablaInformes tbody');
 const textoTotalUsuarios = document.getElementById('totalUsuarios');
 
 // 2. Acción para volver al menú principal
-btnVolver.addEventListener('click', () => {
-    // Te regresa a la página del menú (ajusta la ruta si tu HTML del menú se llama diferente)
-    window.location.href = './Menu_principal/menu.html';
+btnAyuda.addEventListener('click', () => {
+    window.location.href = 'https://www.comunidad.madrid/servicios/atencion-ciudadano';
 });
-
 // 3. DATOS DE PRUEBA (Mientras tu amigo nos hace la ruta en Node.js)
 const usuariosPrueba = [
     { id: 1, nombre: "Juan Pérez", correo: "juan@gmail.com", estado: "Activo" },

@@ -47,17 +47,15 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 200%;
+    font-size: 20px; /* Ajustado para que no se vea gigante */
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Le da un efecto suave al pasar el mouse */
 }
-
 
 .btn-ayuda:hover {
     background-color: #e4d100;
 }
-
 /* CONTENEDOR PRINCIPAL */
 .main-content {
     flex: 1;
